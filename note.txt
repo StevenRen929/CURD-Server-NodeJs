@@ -1,0 +1,99 @@
+CMS(content managenment system) this lab
+blog
+e-commence
+
+school
+jr-CMS
+student
+teacher
+course
+
+user(admin)
+
+
+LMS(simpler than CMS)
+
+ERD(entity relational diagram)
+hackolade
+moon modeler
+lucid chart
+draw-io
+
+step1-project init 
+npm init -y
+mkdir controller
+mkdir middleware
+mkdir models
+mkdir routes
+touch index.js 入口文件
+
+npm i -D nodemon
+
+package.json
+script :"dev":
+
+creat.Controller
+creat.router for students
+creat export for stidents(index.js)
+
+npm i helmet winston morgan dotenv
+
+creat .env in root file
+
+gitignore .env and 
+
+in .env set port = 3000;
+
+creat config and modify config(config need to use .env)
+
+
+in app.js, require config and set up the rest using config
+
+creat common folder in src and using winston to make logger
+-using winston template to config logger
+-put logger to all files need to be logged
+
+config morgan for logging HTTP requests
+put morgan to file need to app.js
+
+formatresponse middle ware used to costomize response format
+
+add errormiddleware and not found middle ware
+
+ npm i mongoose 
+
+modification on student controller
+get,post,...
+
+connect database with server
+put them in common folder->utils
+
+connect the database before listening on the server
+
+change the .env db string
+
+(for logger, we can use elastic search + kibanna if logger amount is large)
+
+debugging：
+-app.use(json()) not app.use(json)
+-404. notfound middleware need to be placed after app.use('/v1',v1Router)
+otherwise it will always be 404
+
+
+mongodaCompass
+
+npm i joi
+implement joi package in student model for email validation
+
+
+on schema relate students and courses
+{
+    1 students can have lots of courses
+    1 courses can have lots of students
+}
+
+
+sql->cascade delete 级联删除 
+
+mongoose and mongodb don't have cascade delete
+we need to update student mannully if we delete a course

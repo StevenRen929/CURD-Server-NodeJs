@@ -97,3 +97,55 @@ sql->cascade delete 级联删除
 
 mongoose and mongodb don't have cascade delete
 we need to update student mannully if we delete a course
+
+
+create user model 
+login/register authetication
+
+encrypt the password ->  decrypt
+
+rainbow table
+dictionary
+brute force
+
+hash + salt(ramdom generated)
+x+salt1 -> X1 + salt1
+x+salt2 -> X2 + salt2
+
+x' + salt1 -> X1' === X1 + salt1
+
+(pepper) => put pepper in server side
+env variable only hack the database won't be able to decrypted
+
+use bcrypt
+
+
+SESSION and Cookie
+SSR(server side rendering)
+session id -> cookie
+CSRF attcak
+
+jwt(jason web token)
+stateless
+cross-domain
+CSR (client sid rendering)
+time-limit type token , it will always work until expire
+change secrete,  will force log out.
+
+
+if the web-browser not disable java-script
+we can't use jwt
+
+npm i jsonwebtoken
+
+set up token generation and validation
+.env, config etc
+
+
+multiple roles
+admin->delete
+user->add,post,patch,put
+
+access control
+RBAC ->role based AC
+ABAC ->attribute base AC

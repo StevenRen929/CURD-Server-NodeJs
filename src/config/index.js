@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+console.log('ENV:',process.env.NODE_ENV);
 const optionalConfig = {
     PORT: process.env.PORT||3000,
     NODE_ENV :process.env.NODE_ENV || 'dev'

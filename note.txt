@@ -149,3 +149,15 @@ user->add,post,patch,put
 access control
 RBAC ->role based AC
 ABAC ->attribute base AC
+
+
+single signout
+My App Front end/Login page->login with google -> redirect to google login page
+->login to google ->google autheticate -> ask for premission to give data to my app
+->ask specific access data - > google redirect you back to MY  app FE (with a token)->
+FE send token back to my app back end -> back end get user data from google with token-> google return info
+like email,username 
+-> Back end need to store this email and username to its own database
+-> Need another collection like(userSSO)
+-> My app be generate token and return to FE
+

@@ -120,7 +120,10 @@ const course = await Course.findByIdAndUpdate(
   id,
   {code,name,description} ,
   //return the result after renew
-  {new : true}).exec();
+  {
+    new : true
+  }
+).exec();
 
 if(!course){
   //method1

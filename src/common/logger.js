@@ -1,7 +1,7 @@
 const winston = require('winston');
 const path = require('path');
 const { time } = require('console');
-
+const config = require('../config')
 
 //这个logger只会记录模板里面的信息 所以要加点东西
 //winston.createLogger()
@@ -9,7 +9,9 @@ const { time } = require('console');
 //__filename
 const getLogger = (fileName) => {
     const logger = winston.createLogger({
-        level:'info',
+        //level:'info',
+        //level: 'warning',
+        level: config.NODE_ENV === 'test'? 'warning':'info', 
         defaultMeta:{
             file: fileName?path.basename(fileName):undefined
         },

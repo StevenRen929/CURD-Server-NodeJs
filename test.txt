@@ -1,0 +1,22 @@
+->unit test - jest(most),mocha,jasmine
+npm i -D jest
+
+->integration test - supertest for nodejs , selenium (java)
+->end-to-end test(e2e front end and back end test) selenium, cypress
+unite test with mock
+QA(tester)
+regression test;
+
+TDD(test driven development) 
+
+black box testing - integration test
+white box testing - unit test
+
+jest test file
+auth.controller.test.js
+auth.controller.spec.js
+__test__
+
+
+using jest-mongodb to do integration test
+npm install --save-dev @shelf/jest-mongodb

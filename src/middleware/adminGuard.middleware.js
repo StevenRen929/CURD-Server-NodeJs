@@ -1,5 +1,5 @@
 module.exports = (req,res,next)=>{
-    console.log(req.user);
+    //console.log(req.user);
 
     if(!req.user){
         res.formatResponse('unable to access',403);

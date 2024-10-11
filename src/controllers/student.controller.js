@@ -39,7 +39,7 @@ const addStudent = async (req, res, next) => {
 
   //use method2 here
   const student = await Student.create({firstName,lastName,email});
-  console.log(student)
+  //console.log(student)
   res.formatResponse(student,201);
   }catch(e){
     logger.info(e.message);

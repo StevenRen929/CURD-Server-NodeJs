@@ -6,9 +6,11 @@ const studentSchema = new Schema({
         type:String, // or type:'string'
         uppercase:true,
         alias: 'name',//rename virtual field
+        required:true
     },
     lastName:{
         type:String,
+        required: true
     },
     email:{
         type:String,

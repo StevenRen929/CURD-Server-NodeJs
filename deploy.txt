@@ -1,0 +1,32 @@
+AWS
+EC2(virtual machine) + environement set up + load balancer + monitoring ...
+(linux)
+1.install the nodeJS environment in this virtual machine
+(old method)
+
+elastic beanstalk
+Codepipeline CI/CD (continous integration/ continous deployment)
+
+CD(today):
+github repo(new change) - > code pipeline -> pull the new code->  deploy to elasticbenstalk
+
+CI:(github actions)
+
+IAM
+identity Access managenment
+Role control(premission control)
+ssh
+
+MongoDB atlas
+cloud database(back up 1 day/ 1 hour)
+
+
+add .npmrc in project folder(compulsory in AWS)
+
+PM2
+process manager2 
+"start": "pm2 start src/index.js --name jrCms" ,
+"stop": "pm2 stop jrCms",
+"poststart":"pm2 log jrCms"
+
+(docker + kuberbete)

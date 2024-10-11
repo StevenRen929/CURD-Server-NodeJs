@@ -4,7 +4,6 @@
 const express = require('express');
 const v1Router = require('./routes');
 const config = require('./config');
-const getLogger =require('./common/logger');
 const morgan = require('./common/morgan');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -12,10 +11,10 @@ const cors = require('cors');
 
 const pathNotFoundMiddleware = require('./middleware/pathNotFound.middleware');
 const unknowErrorMiddleware = require('./middleware/errorMiddleware/unknowError.middleware');
-const connectToDb = require('./common/utils/db');
 const formatResponseMiddleware = require('./middleware/formatResponse.middleware');
 const validationErrorMiddleware = require('./middleware/errorMiddleware/validationError.middleware');
 const notFoundMiddleware = require('./middleware/errorMiddleware/notFoundError.middleware');
+const getLogger = require('./common/logger')
 
 
 const app = express();
@@ -45,9 +44,5 @@ app.use(pathNotFoundMiddleware);//一定要放在后面
 
 
 
-connectToDb().then(()=>{
-    app.listen(config.PORT,()=>{
-        //console.log(`server is listening on port : ${config.PORT}`)
-        logger.info(`server is listening on port : ${config.PORT}`);
-    })
-})
+
+module.exports = app;
